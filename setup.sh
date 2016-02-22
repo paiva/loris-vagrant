@@ -19,15 +19,12 @@ apt-get install git
 apt-get update
 
 # Install Smarty 3
-wget http://www.smarty.net/files/Smarty-3.0.0.tar.gz
-tar -zxvf Smarty-3.0.0.tar.gz
-rm Smarty-3.0.0.tar.gz
-mkdir ../usr/lib/php5/Smarty
-cp -r Smarty-3.0.0/libs/* /usr/lib/php5/Smarty
+apt-get install smarty3
 
 # Install Composer
 curl -sS https://getcomposer.org/installer | php
-mv composer.phar ../usr/local/bin/composer
+mv composer.phar /usr/local/bin/composer
+composer install
 
 # Start Apache2
 service apache2 start
